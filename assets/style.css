@@ -1,0 +1,119 @@
+:root{
+    --primary-color: #ffffff;
+    --secondary-color: #14213d;
+    --accent-color: #fca311;
+    --black-color: #000000;
+    --gray-color: #e5e5e5;
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    font-family: system-ui, sans-serif;
+    line-height: 1.7;
+    color: var(--black-color);
+    background-color: var(--primary-color);
+    --sb-width: 3.8rem;
+}
+
+body.sb-expanded {
+    --sb-width: 10rem;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+aside {
+    position: fixed;
+    inset: 10px auto 10px 10px;
+    padding: 1rem;
+    width: var(--sb-width);
+    border-radius: 0.375rem;
+    background-color: var(--secondary-color);
+    transition: width 0.5s ease-in-out;
+}
+
+aside nav {
+    height: 100%;
+}
+
+aside nav ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+aside nav li {
+    margin-bottom: 0.5rem;
+}
+
+aside nav li:last-child {
+    margin-top: auto;
+}
+
+aside nav li:last-child a{
+    justify-content: center;
+}
+
+aside nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 1rem;
+    /* padding-left: 2px;
+    padding-right: 1px;
+    padding-top: 2px;
+    padding-bottom: 1px; */
+    border-radius: 0.375rem;
+    color: var(--primary-color);
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+aside nav a i {
+    margin-right: 5px;
+}
+
+aside nav a.active,
+aside nav a:focus-visible{
+    outline: none;
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+}
+
+
+aside nav a:hover{
+    border: 1px solid var(--accent-color);
+}
+
+aside nav a span {
+    font-size: 0.750rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.sb-expanded aside nav a span {
+    opacity: 1;
+    visibility: visible;
+}
+
+main {
+    margin-left: 5rem;
+    padding: 1rem 2rem;
+    transition: margin-left 0.5s ease-in-out;
+}
+
+@media (min-width: 768px){
+    main {
+        margin-left: var(--sb-width);
+    }
+}

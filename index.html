@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus</title>
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="node_modules/boxicons/css/boxicons.css">
+    <link rel="stylesheet" href="assets/nexus.css">
+</head>
+<body class="sb-expanded">
+    <aside>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <i class='bx bxs-dashboard'></i><span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-user'></i><span>Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-cog'></i><span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-sb-button>
+                        <i class='bx bx-menu'></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <h1>Nexus Template</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui enim quos eaque eveniet debitis eligendi quis vitae nulla, sit rerum dicta, beatae nostrum est quia laborum veniam non sint exercitationem atque odit accusantium! Animi, soluta obcaecati architecto beatae molestias ut.</p>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script>
+        const sbButton = document.querySelector('[data-sb-button]');
+        sbButton.addEventListener('click', function(e){
+            e.preventDefault();
+            document.body.classList.toggle('sb-expanded');
+        })
+    </script>
+</body>
+</html>
